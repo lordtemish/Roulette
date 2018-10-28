@@ -5,8 +5,15 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="white">#fefefe</color>
-    <color name="red">#df0d0d</color>
-    <color name="redBack">#920a0a</color>
+    <color name="red">#df0b0b</color>
+    <color name="redCancel">#a51111</color>
+    <color name="redCanTra">#90a51111</color>
+    <color name="redPink">#f53939</color>
+    <color name="redSettings">#bd1b1b</color>
+    <color name="redBack">#e76464</color>
     <color name="redLight">#a31111</color>
+    <color name="redL">#760202</color>
     <color name="black">#000000</color>
+    <color name="greyy">#ededed</color>
+    <color name="darkgrey">#838383</color>
 </resources>

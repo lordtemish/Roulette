@@ -3,12 +3,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.LoginFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.LoginFragment"
+    android:background="@drawable/ic_background">
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:src="@drawable/peperowhite"
+                android:padding="40dp"
+                />
 
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="600dp"
+            android:layout_height="377dp"
+            android:layout_gravity="center"
+            android:background="@drawable/drawerbackgr"
+            android:layout_marginBottom="40dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="100dp"
+            android:paddingStart="120dp"
+            android:paddingEnd="120dp"
+            >
+
+            <LinearLayout
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/nameEditText"
+                    android:layout_width="250dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/lightgrey_page"
+                    android:inputType="text"
+                    android:textSize="17sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="Ваше имя"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkgrey"
+                    />
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/phoneEditText"
+                    android:layout_width="250dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/lightgrey_page"
+                    android:inputType="phone"
+                    android:textSize="17sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="Номер телефона"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkgrey"
+                    />
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/mailEditText"
+                    android:layout_width="250dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/lightgrey_page"
+                    android:inputType="textEmailAddress"
+                    android:textSize="17sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="E-mail адрес"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkgrey"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/gameTextView"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:background="@drawable/button_back"
+                android:gravity="center"
+                android:text="Играть"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <com.dynamica.lordtemich.roulette.Fragments.ProgressView
+        android:id="@+id/progressView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.dynamica.lordtemich.roulette.Fragments.ProgressView>
 </FrameLayout>

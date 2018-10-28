@@ -9,7 +9,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/redBack"
+        android:background="@color/redCancel"
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
         android:paddingBottom="20dp">
@@ -19,26 +19,84 @@
                 android:orientation="vertical">
                     <android.support.constraint.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"></android.support.constraint.ConstraintLayout>
+                        android:layout_height="70dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            android:text="Настройки"
+                            android:id="@+id/settings"
+                            />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:src="@drawable/peperowhite"/>
+                    </android.support.constraint.ConstraintLayout>
                 <android.support.constraint.ConstraintLayout
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="70dp"
                     android:background="@drawable/button_lightback"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
                     >
-
+                        <TextView
+                            android:id="@+id/posT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:textSize="17sp"
+                            android:text="Позиция выйгрыша"
+                            />
+                        <com.dynamica.lordtemich.roulette.Fragments.CounterView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:id="@+id/counterView"
+                            />
                 </android.support.constraint.ConstraintLayout>
                 <android.support.constraint.ConstraintLayout
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="70dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:id="@+id/rozygrLayout"
                     android:background="@drawable/button_lightback"
                     >
-
+                    <TextView
+                        android:id="@+id/rozNe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textSize="17sp"
+                        android:text="Не участвуют в выйгрыше"
+                        />
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/recyclerView"
+                        />
                 </android.support.constraint.ConstraintLayout>
 
             </LinearLayout>
             <TextView
+                android:id="@+id/saveTextView"
                 android:layout_width="200dp"
                 android:layout_height="70dp"
                 android:background="@drawable/button_back"
@@ -50,5 +108,39 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 />
     </android.support.constraint.ConstraintLayout>
-
+    <FrameLayout
+        android:id="@+id/extraLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/redCanTra">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="450dp"
+            android:layout_height="499dp"
+            android:background="@drawable/backsettings"
+            android:layout_gravity="center"
+            android:padding="50dp"
+            android:onClick="onClick"
+            >
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/rozygrRecyclerView"
+                    />
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/button_back"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="Сохранить"
+                    android:textSize="17sp"
+                    android:id="@+id/saveSettings"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
 </FrameLayout>

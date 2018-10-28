@@ -13,6 +13,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/content_frame"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/progressLayout">
+            <com.dynamica.lordtemich.roulette.Fragments.ProgressView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
     </FrameLayout>
     <LinearLayout
         android:layout_width="500dp"
@@ -24,8 +33,7 @@
         <FrameLayout
             android:id="@+id/drawerFrame"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white">
+            android:layout_height="match_parent">
             <com.dynamica.lordtemich.roulette.Fragments.DrawerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
